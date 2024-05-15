@@ -16,10 +16,10 @@ pipeline {
             '''
             }
         }
-          stage('docker-install-123') {
+          stage('install-123') {
             steps {
                    sh '''
-           sudo yum install tree -y
+           sudo yum install tomcat -y
             '''
             }
         }
