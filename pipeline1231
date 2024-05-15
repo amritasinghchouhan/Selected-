@@ -16,6 +16,16 @@ pipeline {
             '''
             }
         }
+          stage('docker-install') {
+            steps {
+                   sh '''
+           sudo yum install tree -y
+            '''
+            }
+        }
+
+
+
         stage ('docker-build-img') {
          steps {
             sh '''
