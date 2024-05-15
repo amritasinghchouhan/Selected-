@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('git-install') {
             steps {
-            git branch: 'branch', url: 'https://github.com/SanjayTomar22/pikachu.git'
+            git branch: 'main', url: 'https://github.com/SanjayTomar22/pikachu.git'
             }
         }
         stage('docker-install') {
