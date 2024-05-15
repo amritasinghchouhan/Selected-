@@ -16,23 +16,12 @@ pipeline {
             '''
             }
         }
-        stage ('pushing-image'){
-            steps{
-              sh '''
-             sudo docker built -t new_repo .
-             '''
-            }
-        }
-
-       stage ('pushing-image13'){
-            steps{
-              sh '''
-             sudo aws ecr get-login-password --region ap-south-1 | sudo docker login --username AWS --password-stdin 471112517670.dkr.ecr.ap-south-1.amazonaws.com
-             sudo docker tag new_repo:latest 471112517670.dkr.ecr.ap-south-1.amazonaws.com/new_repo:latest
-             sudo docker push  471112517670.dkr.ecr.ap-south-1.amazonaws.com/new_repo:latest
+                stage ('docker-build') {
+         steps {
+            sh '''
+            sudo docker build -t myimg .
             '''
-            }
-
-        }
-}
+         }
+      }
+    }
 }
