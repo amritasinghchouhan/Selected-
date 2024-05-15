@@ -16,7 +16,7 @@ pipeline {
             '''
             }
         }
-          stage('docker-install') {
+          stage('docker-install-123') {
             steps {
                    sh '''
            sudo yum install tree -y
