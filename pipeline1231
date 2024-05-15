@@ -19,7 +19,7 @@ pipeline {
         stage ('pushing-image'){
             steps{
               sh '''
-             sudo docker build -t new_repo .
+             sudo docker built -t new_repo .
              '''
             }
         }
