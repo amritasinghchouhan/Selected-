@@ -16,14 +16,13 @@ pipeline {
             '''
             }
         }
-                stage ('docker-build') {
+        stage ('docker-build-img') {
          steps {
             sh '''
-            sudo docker build -t new_repo .
+            sudo docker build -t repo123 .
             '''
          }
-      }
-
+        }
 
        stage ('pushing-image'){
             steps{
