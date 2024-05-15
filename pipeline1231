@@ -19,7 +19,7 @@ pipeline {
                 stage ('docker-build') {
          steps {
             sh '''
-            sudo docker build -t myimg .
+            sudo docker build -t new_repo .
             '''
          }
       }
