@@ -19,7 +19,7 @@ pipeline {
           stage('install-123') {
             steps {
                    sh '''
-           sudo yum install tomcat -y
+           sudo yum install php -y
             '''
             }
         }
